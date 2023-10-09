@@ -33,9 +33,8 @@ Passport's docs are a little confusing. This guide is extremely helpful: [https:
 
 #### The general flow goes like this:
 1. Request is made to the server.
-2. Request goes through```passport.initialize()```. This attaches ```req._passport``` which Passport uses.
+2. Request goes through```passport.initialize()```. This attaches ```req._passport```, which Passport needs.
 3. Request is routed to the appropriate authenticating strategy middleware ```passport.authenticate(strategy)```.
-4. If the strategy involves, for example, Google Oauth2.0,  the user is redirected to sign in with Google. After authorizing the user, it will redirect the user to the callback endpoint. 
-5. ```passport.authenticate()``` runs the request credentials or the results of the federated authentication through ```verify()``` that you wrote for that strategy.
-6. ```passport.authenticate()``` calls the ```callback()``` with the results from ```verify()```. ```callback()``` may send a response. Or the request continues to travel through the other middleware. 
-
+4. If the strategy involves, for example, Google Oauth2.0,  the user is redirected to sign in with Google. After authorizing the user, it will redirect the user to the callback URL specified in the options. 
+5. ```passport.authenticate()``` runs the request credentials or the results of the federated authentication through ```verify()```, which you wrote for that strategy. ```verify()```. 
+6. ```passport.authenticate()``` calls the ```callback()``` with the results from ```verify()```. ```callback()``` may send a response. Or the request may continue to travel through your other middleware. 

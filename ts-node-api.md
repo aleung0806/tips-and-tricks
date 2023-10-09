@@ -3,22 +3,46 @@
 This is a template for building a REST API using Node, Express and Mongodb.
 
 ### Features
-**Type-based request validation** with [zod]() \
-**Authentication** with [passport]() with ```passport-local```, ```passport-google-oauth20``` and ```passport-github2``` \
-**Authorization**  with configurable role-based or action-based permissions \
-**Session caching** with [redis]() \
-**NoSQL database** with [mongodb]() and [mongoose]() \
-**OpenAPI documentation** with [swagger-ui-express]() \
-**Logging** with [winston]() and [morgan]() \
-**Code quality** with [prettier]() and [eslint]() \
-**Docker support**
+#### **Validation** with [zod](). 
+
+Zod allows run-time type checking and compile-time type-checking from the same schema by letting you infer a Typescript type from a Zod schema. 
+
+
+#### **Authentication** with [passport]() 
+This server comes with ```passport-local```, ```passport-google-oauth20``` and ```passport-github2```.
+
+#### **Authorization**  with configurable role-based or action-based permissions 
+
+
+#### **Session caching** with [redis]() 
+#### **NoSQL database** with [mongodb]() and [mongoose]() 
+#### **OpenAPI documentation** with [swagger-ui-express]() 
+#### **Logging** with [winston]() and [morgan]() 
+#### **Code quality** with [prettier]() and [eslint]()
+#### **Docker support**
 
 ### To start:
 
-1. Install dependences ```npm install```. 
-2. Copy ```example.env``` and change the desired variables.
-3. Make sure ```mongo``` and ```redis``` are installed and running. 
-4. If using Google Oauth 2.0 or Github Oauth, register your app with their API and update your ```.env```.
+1. Install dependences with ```npm install```.
+2. Change the ```.env```.   If using Google OAuth2.0 or Github OAuth, register your app with their API and update the ```.env```. These are the default values:
+  ```
+  PORT=3001
+  DOMAIN=http://localhost:3000
+  SERVER_DOMAIN=http://localhost:3001
+  SESSION_SECRET=1234
+
+  MONGO_URL=mongodb://localhost:27017/node-boilerplate
+  REDIS_URL=redis://localhost:6379
+
+  GOOGLE_CLIENT_SECRET=1234
+  GOOGLE_CLIENT_ID=1234
+
+  GITHUB_CLIENT_SECRET=1234
+  GITHUB_CLIENT_ID=1234
+  ```
+
+
+3. Make sure ```mongo``` and ```redis``` are installed and running and listening to the right ports.
 2. Run server with ```npm start```.
 
 ### Run in a Docker container
@@ -27,7 +51,7 @@ This is a template for building a REST API using Node, Express and Mongodb.
 
 ### To add a new resource
 
-1. Write a zod schema for the resource. Infer the type from it. Zod allows run-time typechecking for, for example, request validation. Zod has useful typescript-like utilities like pick and omit.
+1. Write a zod schema for the resource. Infer the type from it. Zod has useful typescript-like utilities like pick and omit.
 
 2. Write your mongoose schema and type it with your type. Extend the mongoose types for statics and methods if need be.
 
