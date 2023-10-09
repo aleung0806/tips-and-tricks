@@ -1,9 +1,9 @@
 ## Docker
 ```sudo -i``` use terminal as root
 ### Image
-```docker build . -t <tag name>```
+```docker build . -t <image tag>```
 
-```docker run -p <host port>:<container port> -d```
+```docker run -p <host port>:<container port> -d <image tag>``` 
 
 ```run``` is a combination of ```create``` and ```start```
 
