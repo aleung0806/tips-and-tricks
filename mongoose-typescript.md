@@ -14,9 +14,7 @@ interface User {
 ```
 2. We need another interface for the Mongo document. This will extend the resource interface and the `Document` interface provided by Mongoose.
 ```
-interface UserDocument extends User, Document {
-
-}
+interface UserDocument extends User, Document {}
 ```
 
 ### Typing `Schema` and `Model`

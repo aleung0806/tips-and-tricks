@@ -6,4 +6,4 @@ Solved with generic functions.
 #### At what level should API resource calls be made? Project vs Issue
 
 #### mongoose - can you skip type parameters for Schema?
-makes it so that you can't, for example, infer the ```Doctype``` while passing ```TInstanceMethods```
+makes it so that you can't, for example, infer the `Doctype` while passing `TInstanceMethods`

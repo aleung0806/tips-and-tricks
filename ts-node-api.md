@@ -9,7 +9,7 @@ Zod allows run-time type checking and compile-time type-checking from the same s
 
 
 #### **Authentication** with [passport]() 
-This server comes with ```passport-local```, ```passport-google-oauth20``` and ```passport-github2```.
+This server comes with `passport-local`, `passport-google-oauth20` and `passport-github2`.
 
 #### **Authorization**  with configurable role-based or action-based permissions 
 
@@ -23,8 +23,8 @@ This server comes with ```passport-local```, ```passport-google-oauth20``` and `
 
 ### To start:
 
-1. Install dependences with ```npm install```.
-2. Change the ```.env```.   If using Google OAuth2.0 or Github OAuth, register your app with their API and update the ```.env```. These are the default values:
+1. Install dependences with `npm install`.
+2. Change the `.env`.   If using Google OAuth2.0 or Github OAuth, register your app with their API and update the `.env`. These are the default values:
   ```
   PORT=3001
   DOMAIN=http://localhost:3000
@@ -42,12 +42,12 @@ This server comes with ```passport-local```, ```passport-google-oauth20``` and `
   ```
 
 
-3. Make sure ```mongo``` and ```redis``` are installed and running and listening to the right ports.
-2. Run server with ```npm start```.
+3. Make sure `mongo` and `redis` are installed and running and listening to the right ports.
+2. Run server with `npm start`.
 
 ### Run in a Docker container
-1. Build with ```docker build . -t <image-tag>```. 
-2. Run with ```docker run -p <host-port>:3001 -d <image-tag>```. Choose whatever local port you'd like to map to for ```<host-port>```.
+1. Build with `docker build . -t <image-tag>`. 
+2. Run with `docker run -p <host-port>:3001 -d <image-tag>`. Choose whatever local port you'd like to map to for `<host-port>`.
 
 ### To add a new resource
 
